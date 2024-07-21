@@ -1,0 +1,1 @@
+export const backendURL = 'https://book-catalog-backend-qi92.onrender.com';
