@@ -38,9 +38,9 @@ const Favorites = () => {
   }, []);
 
   return (
-    <div className="p-8 border border-solid border-black">
+    <div className="p-8">
       <h1 className="text-2xl font-bold mb-4">Favorite Books</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 border border-solid border-black">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
         {
           favoriteBooks.map((book) => (
             <FavBookListItem key={book._id} book={book} />

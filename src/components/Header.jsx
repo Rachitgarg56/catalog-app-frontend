@@ -19,12 +19,12 @@ export default function Header() {
   const { logout } = useAuth();
 
   return (
-    <header className="bg-white border-b border-solid border-gray-200">
+    <header className="bg-white border-b border-solid text-white border-gray-200" style={{background:'#C4C6AF'}}>
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <img alt="" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" className="h-8 w-auto" />
+            <img alt="" src="https://cdn-icons-png.flaticon.com/512/9453/9453183.png" className="h-12 w-auto" />
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -39,22 +39,22 @@ export default function Header() {
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
 
-          <Link to="/" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link to="/" className="text-lg font-semibold leading-6 text-gray-900">
             Home
           </Link>
-          <Link to="/favorites" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link to="/favorites" className="text-lg font-semibold leading-6 text-gray-900">
           Favorites
           </Link>
           {
             user?.role === 'admin' &&
-            <Link to="/add-book" className="text-sm font-semibold leading-6 text-gray-900">
+            <Link to="/add-book" className="text-lg font-semibold leading-6 text-gray-900">
               Add Book
             </Link>
           }
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
         <Link to={'/login'}>
-          <button onClick={()=>logout()} className="text-sm font-semibold leading-6 text-gray-900">
+          <button onClick={()=>logout()} className="text-lg font-semibold leading-6 text-gray-900">
             Log out <span aria-hidden="true">&rarr;</span>
           </button>
         </Link>  
@@ -68,7 +68,7 @@ export default function Header() {
               <span className="sr-only">Your Company</span>
               <img
                 alt=""
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                src="https://cdn-icons-png.flaticon.com/512/9453/9453183.png"
                 className="h-8 w-auto"
               />
             </Link>
