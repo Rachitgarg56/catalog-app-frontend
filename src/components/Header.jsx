@@ -46,7 +46,7 @@ export default function Header() {
           Favorites
           </Link>
           {
-            user.role === 'admin' &&
+            user?.role === 'admin' &&
             <Link to="/add-book" className="text-sm font-semibold leading-6 text-gray-900">
               Add Book
             </Link>
@@ -98,7 +98,7 @@ export default function Header() {
                   Favorites
                 </Link>
                 {
-                  user.role === 'admin' &&
+                  user?.role === 'admin' &&
                   <Link to="/add-book" className="text-sm font-semibold leading-6 text-gray-900">
                     Add Book
                   </Link>
