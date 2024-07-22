@@ -9,7 +9,7 @@ import useAuth from '../hooks/useAuth.jsx';
 
 const AppRoutes = () => {
   const { isAuthenticated, loading } = useAuth();
-
+console.log(isAuthenticated);
   if (loading) {
     return <div>Loading...</div>; // Or a loading spinner
   }

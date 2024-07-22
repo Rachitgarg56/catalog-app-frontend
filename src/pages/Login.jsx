@@ -36,11 +36,13 @@ export default function Login() {
         });
 
         if (userResponse.status === 200) {
+          const userData = userResponse.data;
+          
           // Store user data in localStorage
-          localStorage.setItem('user', JSON.stringify(userResponse.data));
+          localStorage.setItem('user', JSON.stringify(userData));
           
           // Set authentication state and navigate to homepage
-          login();
+          login(userData);
           navigate('/');
         } else {
           console.error('Failed to fetch user data', userResponse.data);

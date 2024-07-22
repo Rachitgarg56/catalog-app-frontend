@@ -30,4 +30,4 @@ const useAuth = () => {
   return { isAuthenticated, user, loading, login, logout };
 };
 
-export default useAuth;
+export default useAuth
